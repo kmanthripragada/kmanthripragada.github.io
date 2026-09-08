@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krithsanvith Manthripragada</title>
+<meta name="description" content="Krithsanvith Manthripragada is a mechanical engineer at Applied Materials working on atomic layer deposition and microwave plasma hardware. Publications, patents, peer review, and contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F3F4F6;
+    --ink:#1A2030;
+    --ink-soft:#4E5668;
+    --rule:#C9CED8;
+    --accent:#3546B5;
+    --band-h:7px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#151923;
+      --ink:#EEF0F4;
+      --ink-soft:#A8AFBF;
+      --rule:#333A4A;
+      --accent:#8FA0F0;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#151923;
+    --ink:#EEF0F4;
+    --ink-soft:#A8AFBF;
+    --rule:#333A4A;
+    --accent:#8FA0F0;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size:1.0625rem;
+    line-height:1.6;
+    font-optical-sizing:auto;
+  }
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--accent) 45%, transparent)}
+  a:hover{border-bottom-color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-bottom-color:transparent}
+  img{max-width:100%}
+
+  .wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+
+  /* header */
+  header{padding:1.75rem 0 0}
+  .masthead{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+  .name{
+    font-family:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    font-weight:700;font-size:1.05rem;letter-spacing:-0.005em;color:var(--ink);border:0
+  }
+  nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.25rem;flex-wrap:wrap}
+  nav a{font-family:"Bricolage Grotesque", sans-serif;font-size:.95rem;color:var(--ink-soft);border:0}
+  nav a:hover{color:var(--ink)}
+
+  /* hero */
+  .hero{padding:4.5rem 0 3.5rem;display:grid;grid-template-columns:auto 1fr;gap:2.25rem;align-items:start}
+  .stack{
+    display:flex;flex-direction:column-reverse;gap:2px;width:52px;padding-top:.35rem
+  }
+  .stack span{
+    display:block;height:var(--band-h);width:100%;
+    transform-origin:bottom;
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .stack span{transform:scaleY(0);animation:deposit .32s cubic-bezier(.2,.7,.2,1) forwards}
+  }
+  @keyframes deposit{to{transform:scaleY(1)}}
+  .hero h1{
+    font-family:"Bricolage Grotesque", sans-serif;
+    font-weight:700;
+    font-size:clamp(1.9rem, 4.2vw, 3.1rem);
+    line-height:1.08;letter-spacing:-0.02em;
+    margin:0 0 1.25rem;max-width:20ch;
+    font-variation-settings:"opsz" 96;
+  }
+  .hero p{max-width:56ch;margin:0 0 .85rem;font-size:1.1rem}
+  .hero .cap{font-size:.86rem;color:var(--ink-soft);max-width:44ch;margin-top:1.5rem;line-height:1.5}
+
+  /* sections */
+  section{padding:2.75rem 0;border-top:1px solid var(--rule)}
+  h2{
+    font-family:"Bricolage Grotesque", sans-serif;
+    font-weight:700;font-size:1.35rem;letter-spacing:-0.01em;
+    margin:0 0 1.5rem;
+  }
+  section p{max-width:64ch}
+
+  /* timeline rows */
+  .rows{display:grid;grid-template-columns:8.5rem 1fr;column-gap:2rem;row-gap:2rem}
+  .rows .when{
+    font-family:"Bricolage Grotesque", sans-serif;
+    font-weight:500;font-size:.95rem;color:var(--ink-soft);
+    padding-top:.28rem;font-variant-numeric:tabular-nums;
+  }
+  .rows h3{
+    font-family:"Bricolage Grotesque", sans-serif;
+    font-weight:700;font-size:1.12rem;margin:0 0 .15rem;letter-spacing:-0.01em
+  }
+  .rows .org{color:var(--ink-soft);margin:0 0 .6rem;font-size:1rem}
+  .rows p{margin:0 0 .6rem}
+  .rows p:last-child{margin-bottom:0}
+
+  .pub{padding:1.1rem 0 0}
+  .pub h3{font-family:"Source Serif 4", serif;font-weight:600;font-size:1.12rem;margin:0 0 .25rem;font-style:italic;max-width:60ch}
+  .pub p{margin:0}
+
+  ul.plain{list-style:none;margin:0;padding:0;max-width:64ch}
+  ul.plain li{padding:.65rem 0;border-top:1px solid var(--rule)}
+  ul.plain li:first-child{border-top:0;padding-top:0}
+  ul.plain li strong{font-family:"Bricolage Grotesque", sans-serif;font-weight:700;font-size:1.02rem}
+
+  .topics{display:flex;flex-wrap:wrap;gap:.4rem .6rem;margin:1rem 0 0;padding:0;list-style:none;max-width:64ch}
+  .topics li{
+    font-family:"Bricolage Grotesque", sans-serif;font-size:.9rem;
+    border:1px solid var(--rule);padding:.2rem .6rem;border-radius:2px;color:var(--ink-soft)
+  }
+
+  .contact p{margin:0 0 .5rem}
+  footer{padding:2.5rem 0 3rem;border-top:1px solid var(--rule);font-size:.9rem;color:var(--ink-soft)}
+  footer p{margin:0}
+
+  @media (max-width:640px){
+    .hero{grid-template-columns:1fr;gap:1.5rem;padding:3rem 0 2.5rem}
+    .stack{flex-direction:row-reverse;width:100%;height:auto}
+    .stack span{height:24px;width:100%;transform-origin:left}
+    .rows{grid-template-columns:1fr;row-gap:1.75rem}
+    .rows .when{padding-top:0;margin-bottom:.15rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="masthead">
+    <a class="name" href="#top">Krithsanvith Manthripragada</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#patents">Patents</a></li>
+        <li><a href="#service">Peer review</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="hero">
+    <div class="stack" aria-hidden="true">
+      <span style="background:#D2B48C;animation-delay:.00s"></span>
+      <span style="background:#7B4A2E;animation-delay:.07s"></span>
+      <span style="background:#4A2C7A;animation-delay:.14s"></span>
+      <span style="background:#2B4BB5;animation-delay:.21s"></span>
+      <span style="background:#5FA8D3;animation-delay:.28s"></span>
+      <span style="background:#C9D46A;animation-delay:.35s"></span>
+      <span style="background:#D9B94A;animation-delay:.42s"></span>
+      <span style="background:#E08A3C;animation-delay:.49s"></span>
+      <span style="background:#B04A7A;animation-delay:.56s"></span>
+      <span style="background:#3A55C4;animation-delay:.63s"></span>
+      <span style="background:#4CA88C;animation-delay:.70s"></span>
+      <span style="background:#9BC85A;animation-delay:.77s"></span>
+      <span style="background:#E3C94A;animation-delay:.84s"></span>
+      <span style="background:#E77E9C;animation-delay:.91s"></span>
+    </div>
+    <div>
+      <h1>I design the hardware inside machines that build films one atomic layer at a time.</h1>
+      <p>Mechanical engineer at Applied Materials in Santa Clara, working on atomic layer deposition platforms and microwave plasma systems. Trained in turbulence at Illinois and aerospace at IIT Bombay.</p>
+      <p>The problems I find most interesting are the ones where heat, flow, and structure have to be solved together inside a single tightly toleranced assembly, and where the answer has to survive contact with a production floor.</p>
+      <p class="cap">The bands at left follow the interference colors of a silicon dioxide film on silicon, from about 500 to 4400 angstroms. It is how you read film thickness by eye in a fab.</p>
+    </div>
+  </div>
+
+  <section id="work">
+    <h2>Work</h2>
+    <div class="rows">
+      <div class="when">2024 to now</div>
+      <div>
+        <h3>Mechanical Engineer II</h3>
+        <p class="org">Applied Materials, Santa Clara, California</p>
+        <p>I own mechanical subsystems on a production atomic layer deposition platform from concept through release: heated structural stages, gas delivery assemblies, thermal shielding, and vacuum hardware. The work runs on first principles analysis, FEA and CFD against measured process outcomes, and then on the unglamorous parts that make hardware real: GD&amp;T, tolerance stack ups, supplier first articles, and manufacturing ramp.</p>
+        <p>The piece I am proudest of is a thermal management redesign of a deposition chamber that materially improved film uniformity while cutting hardware cost. Alongside it, I lead root cause work on the failures that only show up on a fleet: plasma ignition faults on individual stations, chamber to chamber process mismatch, and contamination sources on multi station tools.</p>
+        <p>Two patent applications filed from this work.</p>
+      </div>
+
+      <div class="when">2022 to 2024</div>
+      <div>
+        <h3>Graduate Research Assistant, Turbulence and Dynamics Group</h3>
+        <p class="org">University of Illinois Urbana Champaign</p>
+        <p>Thesis work on how skewness in a wake flow governs its Fourier harmonic structure at low Reynolds number, using spectral analysis of multipoint flow fields. Published with Theresa Saxton-Fox under NSF funding. Also taught design for manufacturing to 54 undergraduates: DFA, GD&amp;T, tolerance analysis, and hands on machining, 3D printing, and injection molding.</p>
+      </div>
+
+      <div class="when">2023</div>
+      <div>
+        <h3>Mechanical Systems Software Engineering Intern</h3>
+        <p class="org">Caterpillar, Virtual Product Development</p>
+        <p>Migrated multibody dynamics component models from legacy to modern simulation tooling and validated the pipeline across teams.</p>
+      </div>
+
+      <div class="when">2021 to 2022</div>
+      <div>
+        <h3>Aerodynamics and Manufacturing Head, Team Rakshak</h3>
+        <p class="org">Indian Institute of Technology Bombay</p>
+        <p>Led a forty person team to design, build, and fly a fully autonomous UAV, owning airframe and wing design, structural FEA, wind tunnel testing, and fabrication. Flown at SUAS 2022.</p>
+      </div>
+
+      <div class="when">2021</div>
+      <div>
+        <h3>Project Intern, High Lift Actuation Systems</h3>
+        <p class="org">Collins Aerospace, Raytheon Technologies, Bengaluru</p>
+        <p>Simscape modeling of gearboxes, brakes, hydraulic motors, and valves, evaluating actuator and sensor response.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research and publication</h2>
+    <p>My research background is in fluid dynamics: coherent structures in wakes, and what the shape of a velocity signal tells you about the modes underneath it. That training turned out to be the right preparation for deposition hardware, where flow uniformity across a wafer is the whole game.</p>
+    <div class="pub">
+      <h3>Relating Skewness and Fourier Harmonics in Low Reynolds Number Wake Flow</h3>
+      <p>Krithsanvith Manthripragada and Theresa Saxton-Fox. AIAA AVIATION Forum, 2024. AIAA 2024-4191. Supported by NSF Grant 2118209.</p>
+      <p><a href="https://doi.org/10.2514/6.2024-4191">doi.org/10.2514/6.2024-4191</a> &nbsp; <a href="https://par.nsf.gov/servlets/purl/10544976">Open access PDF</a></p>
+      <p style="margin-top:.6rem">Also presented at the APS Division of Fluid Dynamics meeting, 2024. The full treatment is in my M.S. thesis, <a href="https://hdl.handle.net/2142/124604">University of Illinois, 2024</a>.</p>
+    </div>
+  </section>
+
+  <section id="patents">
+    <h2>Patents</h2>
+    <ul class="plain">
+      <li><strong>Thermal management architecture for a deposition chamber</strong><br>US patent application, Applied Materials. Patent pending.</li>
+      <li><strong>Coating approach for plasma exposed process hardware</strong><br>US patent application, Applied Materials. Patent pending.</li>
+    </ul>
+  </section>
+
+  <section id="service">
+    <h2>Peer review</h2>
+    <ul class="plain">
+      <li><strong>ASME Journal of Fluids Engineering</strong><br>Reviewer</li>
+      <li><strong>Journal of Vacuum Science and Technology A</strong><br>Reviewer</li>
+    </ul>
+    <p style="margin-top:1.5rem">I am glad to review in the areas below and can be reached at the address under Contact. For IEEE RAS venues my PaperPlaza PIN is 542549.</p>
+    <ul class="topics">
+      <li>Atomic layer deposition</li>
+      <li>Plasma processing and plasma sources</li>
+      <li>Semiconductor manufacturing equipment</li>
+      <li>Vacuum and gas delivery hardware</li>
+      <li>Thermal management of precision assemblies</li>
+      <li>Multiphysics modeling, CFD and heat transfer</li>
+      <li>System identification and chamber matching</li>
+      <li>Failure diagnosis on production tools</li>
+      <li>Plasma resistant coatings</li>
+      <li>Fluid dynamics and turbulence</li>
+      <li>Precision mechanical design and GD&amp;T</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="rows">
+      <div class="when">2024</div>
+      <div>
+        <h3>M.S. Mechanical Engineering, Theoretical and Applied Mechanics</h3>
+        <p class="org">University of Illinois Urbana Champaign, thesis track</p>
+      </div>
+      <div class="when">2022</div>
+      <div>
+        <h3>B.Tech with Honors, Aerospace Engineering</h3>
+        <p class="org">Indian Institute of Technology Bombay</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p><a href="mailto:krithsanvith22@gmail.com">krithsanvith22@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/krithsanvith/">linkedin.com/in/krithsanvith</a></p>
+    <p>Based in the San Francisco Bay Area.</p>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>Krithsanvith Manthripragada. Views here are my own and not those of my employer.</p>
+</footer>
+
+</body>
+</html>
